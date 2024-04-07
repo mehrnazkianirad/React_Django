@@ -1,11 +1,13 @@
 
 import React from 'react';
-import Authentication from './Authentication';
+import LoginForm from './Component/LoginForm';
+import SignupForm from './Component/SignupForm';
 
 function App() {
   return (
     <div>
-      <Authentication />
+      <LoginForm />
+      <SignupForm/>
     </div>
   );
 }

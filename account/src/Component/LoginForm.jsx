@@ -41,11 +41,11 @@ const LoginForm = () => {
         return true;
     }
 
-    const securelyStoreToken = (token, user_id) => {
+    const securelyStoreToken = (token, user_id) => { // Securely storing the token and user ID
         const expiryDate = new Date(Date.now() + 3600000); // 1 hour
 
-        document.cookie = `token=${token}; expires=${expiryDate.toUTCString()}; path=/; HttpOnly`;
-        document.cookie = `user_id=${user_id}; expires=${expiryDate.toUTCString()}; path=/; HttpOnly`;
+        document.cookie = `token=${token}; expires=${expiryDate.toUTCString()}; path=/; HttpOnly; Secure`;
+        document.cookie = `user_id=${user_id}; expires=${expiryDate.toUTCString()}; path=/; HttpOnly' Secure`;
     }
 
     const redirectToDashboard = () => {
